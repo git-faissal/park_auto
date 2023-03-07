@@ -1,0 +1,19 @@
+<?php
+if(isset($_SESSION['id_admin'])){
+      if(!empty($_SESSION['id_admin']))
+    {
+         $id_user=$_SESSION['id_admin'];
+	}else{?>
+        	<script>
+               window.location.replace("../controllers/deconnexion.php");
+            </script>
+        	<?php
+	}
+ }else{?>
+  <script>
+       window.location.replace("../controllers/deconnexion.php");
+    </script>
+  <?php
+
+ }
+ ?>

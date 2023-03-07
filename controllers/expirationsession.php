@@ -1,0 +1,19 @@
+<?php
+if(isset($_SESSION['id_client'])){
+      if(!empty($_SESSION['id_client']))
+    {
+         $id_user=$_SESSION['id_client'];
+	}else{?>
+        	<script>
+               window.location.replace("../controllers/deconnexion.php");
+            </script>
+        	<?php
+	}
+ }else{?>
+  <script>
+       window.location.replace("../controllers/deconnexion.php");
+    </script>
+  <?php
+
+ }
+ ?>
